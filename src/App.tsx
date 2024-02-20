@@ -1,8 +1,10 @@
-import './App.css'
 
 export function App() {
 
   return (
-    <h1>Hello World</h1>
+    <div className="py-10 space-y-8">
+      <div></div>
+      <main className="max-w-6xl mx-auto space-y-5"></main>
+    </div>
   )
 }
