@@ -1,4 +1,4 @@
-import { FileDown, Filter, Loader2, MoreHorizontal, Plus, Search } from 'lucide-react'
+import { FileDown, Filter, MoreHorizontal, Plus, Search } from 'lucide-react'
 import { Tabs } from './components/tabs'
 import { Header } from './components/header'
 import { Button } from './components/ui/button'
@@ -23,7 +23,8 @@ export type TagResponse = {
 
 export type Tag = {
   title: string
-  amoutOfVideos: number
+  slug: string
+  amountOfVideos: number
   id: string
 }
 
@@ -130,7 +131,7 @@ export function App() {
             <TableRow>
               <TableHead></TableHead>
               <TableHead>Tag</TableHead>
-              <TableHead>Amout of Videos</TableHead>
+              <TableHead>Amount of Videos</TableHead>
               <TableHead></TableHead>
             </TableRow>
           </TableHeader>
@@ -142,11 +143,11 @@ export function App() {
                   <TableCell>
                     <div className='flex flex-col gap-0.5'>
                       <span className='font-medium'>{tag.title}</span>
-                      <span className='text-xs text-zinc-500'>{tag.id}</span>
+                      <span className='text-xs text-zinc-500'>{tag.slug}</span>
                     </div>
                   </TableCell>
                   <TableCell className='text-zinc-300'>
-                    {tag.amoutOfVideos} video(s)
+                    {tag.amountOfVideos} video(s)
                   </TableCell>
                   <TableCell>
                     <Button>
